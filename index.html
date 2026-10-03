@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Brazzom | Watch & Explore</title>
+  <meta name="description" content="Brazzom - Watch, Download and Explore More Videos">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, #3b0808 0%, #100000 35%, #050505 75%);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 25px 15px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 520px;
+    }
+
+    /* LOGO */
+    .logo-area {
+      text-align: center;
+      padding: 20px 0 25px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+
+      background: linear-gradient(
+        135deg,
+        #ff1616,
+        #ff5b35
+      );
+
+      box-shadow:
+        0 8px 30px rgba(255, 30, 30, 0.35);
+    }
+
+    .tagline {
+      color: #999;
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    /* MAIN CARD */
+    .card {
+      position: relative;
+      overflow: hidden;
+
+      background: rgba(18, 18, 18, 0.95);
+
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 25px;
+
+      padding: 35px 22px;
+
+      text-align: center;
+
+      box-shadow:
+        0 25px 80px rgba(0,0,0,0.6);
+    }
+
+    .card::before {
+      content: "";
+
+      position: absolute;
+
+      width: 250px;
+      height: 250px;
+
+      background: rgba(255, 0, 0, 0.18);
+
+      filter: blur(80px);
+
+      border-radius: 50%;
+
+      top: -120px;
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* BADGE */
+    .badge {
+      display: inline-block;
+
+      padding: 8px 14px;
+
+      border-radius: 50px;
+
+      background: rgba(255, 35, 35, 0.12);
+
+      border: 1px solid rgba(255, 80, 80, 0.25);
+
+      color: #ffb0b0;
+
+      font-size: 11px;
+      font-weight: bold;
+
+      margin-bottom: 18px;
+    }
+
+    /* TITLE */
+    h1 {
+      font-size: 32px;
+      line-height: 1.15;
+
+      margin-bottom: 12px;
+
+      letter-spacing: -1px;
+    }
+
+    .description {
+      color: #aaa;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+      max-width: 400px;
+
+      margin: 0 auto 25px;
+    }
+
+    /* BUTTONS */
+    .buttons {
+      display: grid;
+      gap: 13px;
+    }
+
+    .btn {
+      min-height: 56px;
+
+      width: 100%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      border-radius: 15px;
+
+      text-decoration: none;
+
+      font-size: 15px;
+
+      font-weight: 700;
+
+      transition: 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* WATCH */
+    .watch {
+      color: white;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ff1616,
+          #ff4b2b
+        );
+
+      box-shadow:
+        0 10px 30px rgba(255,30,30,0.25);
+    }
+
+    /* DOWNLOAD */
+    .download {
+      color: #111;
+
+      background: white;
+    }
+
+    /* MORE VIDEOS */
+    .more {
+      color: white;
+
+      background: #181818;
+
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .icon {
+      font-size: 20px;
+    }
+
+    /* FEATURED */
+    .featured {
+      margin-top: 18px;
+
+      padding: 20px;
+
+      border-radius: 20px;
+
+      background: rgba(17,17,17,0.9);
+
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .featured h2 {
+      font-size: 16px;
+
+      margin-bottom: 12px;
+    }
+
+    .video {
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 12px;
+
+      margin-top: 10px;
+
+      background: #0b0b0b;
+
+      border-radius: 13px;
+
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .thumbnail {
+      width: 75px;
+      height: 55px;
+
+      flex-shrink: 0;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 10px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #3d0808,
+          #171717
+        );
+
+      font-size: 20px;
+    }
+
+    .video-info {
+      text-align: left;
+    }
+
+    .video-title {
+      font-size: 13px;
+
+      font-weight: bold;
+    }
+
+    .video-text {
+      color: #777;
+
+      font-size: 11px;
+
+      margin-top: 5px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+
+      color: #666;
+
+      font-size: 11px;
+
+      padding: 25px 0 10px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 380px) {
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .logo {
+        font-size: 30px;
+      }
+
+      .card {
+        padding: 30px 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LOGO -->
+    <header class="logo-area">
+
+      <div class="logo">
+
+        <span class="logo-icon">
+          B
+        </span>
+
+        <span>Brazzom</span>
+
+      </div>
+
+      <p class="tagline">
+        Watch • Download • Explore
+      </p>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <section class="card">
+
+      <div class="card-content">
+
+        <span class="badge">
+          NEW VIDEO AVAILABLE
+        </span>
+
+        <h1>
+          Your Next Video Is Waiting
+        </h1>
+
+        <p class="description">
+          Watch the latest video, download it for later,
+          or explore more videos from Brazzom.
+        </p>
+
+
+        <!-- BUTTONS -->
+        <div class="buttons">
+
+          <!-- 1. WATCH NOW -->
+          <a
+            class="btn watch"
+            href="YOUR_WATCH_LINK"
+            target="_blank"
+          >
+            <span class="icon">▶</span>
+            Watch Now
+          </a>
+
+
+          <!-- 2. DOWNLOAD -->
+          <a
+            class="btn download"
+            href="YOUR_DOWNLOAD_LINK"
+            target="_blank"
+          >
+            <span class="icon">↓</span>
+            Download
+          </a>
+
+
+          <!-- 3. MORE VIDEOS -->
+          <a
+            class="btn more"
+            href="YOUR_MORE_VIDEOS_LINK"
+            target="_blank"
+          >
+            <span class="icon">＋</span>
+            More Videos
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FEATURED -->
+    <section class="featured">
+
+      <h2>
+        Featured on Brazzom
+      </h2>
+
+
+      <div class="video">
+
+        <div class="thumbnail">
+          ▶
+        </div>
+
+        <div class="video-info">
+
+          <div class="video-title">
+            Latest Video
+          </div>
+
+          <div class="video-text">
+            Watch the latest content on Brazzom.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="video">
+
+        <div class="thumbnail">
+          +
+        </div>
+
+        <div class="video-info">
+
+          <div class="video-title">
+            More Videos
+          </div>
+
+          <div class="video-text">
+            Explore more videos.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+      © 2026 Brazzom. All rights reserved.
+
+    </footer>
+
+  </div>
+
+
+</body>
+</html>
