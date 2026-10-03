@@ -7,7 +7,6 @@
 <title>Brazzom - More Videos</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -15,10 +14,10 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#070707;
-    color:white;
-    padding:25px 15px;
+    color:#fff;
+    padding:20px 15px;
 }
 
 .container{
@@ -32,7 +31,7 @@ body{
     text-align:center;
     font-size:32px;
     font-weight:800;
-    margin-bottom:8px;
+    margin:10px 0 5px;
 }
 
 .logo span{
@@ -57,18 +56,30 @@ body{
 /* PROFILE */
 
 .profile{
-    background:#151515;
+    background:#141414;
     border:1px solid #292929;
-    border-radius:16px;
-    padding:16px;
-    margin-bottom:12px;
+    border-radius:17px;
+    padding:12px;
+    margin-bottom:14px;
+    overflow:hidden;
+}
+
+.profile-photo{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    display:block;
+    border-radius:12px;
+    background:#222;
 }
 
 .profile-name{
-    font-size:17px;
-    font-weight:bold;
-    margin-bottom:12px;
+    font-size:18px;
+    font-weight:700;
+    padding:13px 4px 11px;
 }
+
+/* BUTTONS */
 
 .buttons{
     display:flex;
@@ -77,12 +88,12 @@ body{
 
 .btn{
     flex:1;
-    padding:12px 8px;
+    padding:13px 7px;
     text-align:center;
     border-radius:10px;
     text-decoration:none;
     font-size:12px;
-    font-weight:bold;
+    font-weight:700;
 }
 
 /* WATCH */
@@ -98,6 +109,10 @@ body{
     background:#252525;
     color:#ddd;
     border:1px solid #333;
+}
+
+.btn:active{
+    transform:scale(.97);
 }
 
 /* BACK */
@@ -119,8 +134,21 @@ footer{
     color:#555;
     font-size:11px;
     margin-top:25px;
+    padding-bottom:10px;
 }
 
+/* MOBILE */
+
+@media(max-width:380px){
+
+    .profile-photo{
+        height:210px;
+    }
+
+    .title{
+        font-size:23px;
+    }
+}
 </style>
 </head>
 
@@ -128,327 +156,388 @@ footer{
 
 <div class="container">
 
-    <div class="logo">
-        Brazzom<span>.</span>
-    </div>
+<div class="logo">
+    Brazzom<span>.</span>
+</div>
 
-    <div class="subtitle">
-        Watch • Download • Explore
-    </div>
+<div class="subtitle">
+    Watch • Download • Explore
+</div>
 
-    <div class="title">
-        More Videos
-    </div>
+<div class="title">
+    More Videos
+</div>
 
 
-    <!-- Alyx Star -->
+<!-- 1 Alyx Star -->
 
-    <div class="profile">
+<div class="profile">
 
-        <div class="profile-name">
-            Alyx Star
-        </div>
+<img
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKUutgdfuec15RXSaRJoR9kjKSIaCOzFSkxMxqG0c1qw&s=10"
+alt="Alyx Star"
+class="profile-photo">
 
-        <div class="buttons">
+<div class="profile-name">
+Alyx Star
+</div>
 
-            <a href="#" class="btn watch">
-                ▶ Watch Video
-            </a>
+<div class="buttons">
 
-            <a href="https://omg10.com/4/11946026"
-               class="btn support"
-               target="_blank">
-                Visit / Support
-            </a>
+<a href="#" class="btn watch">
+▶ Watch Video
+</a>
 
-        </div>
+<a
+href="https://omg10.com/4/11946026"
+target="_blank"
+class="btn support">
+Visit / Support
+</a>
 
-    </div>
+</div>
+</div>
 
 
-    <!-- Angela White -->
+<!-- 2 Angela White -->
 
-    <div class="profile">
+<div class="profile">
 
-        <div class="profile-name">
-            Angela White
-        </div>
+<img
+src="https://image.tmdb.org/t/p/original/awSyYrZTvzELMBVwMXVFNGIVyIG.jpg"
+alt="Angela White"
+class="profile-photo">
 
-        <div class="buttons">
+<div class="profile-name">
+Angela White
+</div>
 
-            <a href="#" class="btn watch">
-                ▶ Watch Video
-            </a>
+<div class="buttons">
 
-            <a href="https://omg10.com/4/11946026"
-               class="btn support"
-               target="_blank">
-                Visit / Support
-            </a>
+<a href="#" class="btn watch">
+▶ Watch Video
+</a>
 
-        </div>
+<a
+href="https://omg10.com/4/11946026"
+target="_blank"
+class="btn support">
+Visit / Support
+</a>
 
-    </div>
+</div>
+</div>
 
 
-    <!-- Natasha Nice -->
+<!-- 3 Natasha Nice -->
 
-    <div class="profile">
+<div class="profile">
 
-        <div class="profile-name">
-            Natasha Nice
-        </div>
+<img
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfa7W3RrafthlrIOkVYW9XczFYnyQA5MluZCHlu_rBrp3g0rbZuR9mmil4&s=10"
+alt="Natasha Nice"
+class="profile-photo">
 
-        <div class="buttons">
+<div class="profile-name">
+Natasha Nice
+</div>
 
-            <a href="#" class="btn watch">
-                ▶ Watch Video
-            </a>
+<div class="buttons">
 
-            <a href="https://omg10.com/4/11946026"
-               class="btn support"
-               target="_blank">
-                Download Now
-            </a>
+<a href="#" class="btn watch">
+▶ Watch Video
+</a>
 
-        </div>
+<a
+href="https://omg10.com/4/11946026"
+target="_blank"
+class="btn support">
+Visit / Support
+</a>
 
-    </div>
+</div>
+</div>
 
 
-    <!-- Penny Barber -->
+<!-- 4 Penny Barber -->
 
-    <div class="profile">
+<div class="profile">
 
-        <div class="profile-name">
-            Penny Barber
-        </div>
+<img
+src="https://hunterfly.in/wp-content/uploads/2026/08/Penny-Barber5.jpg"
+alt="Penny Barber"
+class="profile-photo">
 
-        <div class="buttons">
+<div class="profile-name">
+Penny Barber
+</div>
 
-            <a href="#" class="btn watch">
-                ▶ Watch Video
-            </a>
+<div class="buttons">
 
-            <a href="https://omg10.com/4/11946026"
-               class="btn support"
-               target="_blank">
-               Download Now
-            </a>
+<a href="#" class="btn watch">
+▶ Watch Video
+</a>
 
-        </div>
+<a
+href="https://omg10.com/4/11946026"
+target="_blank"
+class="btn support">
+Visit / Support
+</a>
 
-    </div>
+</div>
+</div>
 
 
-    <!-- Valentina Nappi -->
+<!-- 5 Valentina Nappi -->
 
-    <div class="profile">
+<div class="profile">
 
-        <div class="profile-name">
-            Valentina Nappi
-        </div>
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Valentina_Nappi_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+alt="Valentina Nappi"
+class="profile-photo">
 
-        <div class="buttons">
+<div class="profile-name">
+Valentina Nappi
+</div>
 
-            <a href="#" class="btn watch">
-                ▶ Watch Video
-            </a>
+<div class="buttons">
 
-            <a href="https://omg10.com/4/11946026"
-               class="btn support"
-               target="_blank">
-              Download Now
-            </a>
+<a href="#" class="btn watch">
+▶ Watch Video
+</a>
 
-        </div>
+<a
+href="https://omg10.com/4/11946026"
+target="_blank"
+class="btn support">
+Visit / Support
+</a>
 
-    </div>
+</div>
+</div>
 
 
-    <!-- Lauren Phillips -->
+<!-- 6 Lauren Phillips -->
 
-    <div class="profile">
+<div class="profile">
 
-        <div class="profile-name">
-            Lauren Phillips
-        </div>
+<img
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGhxFP83-4n1cUQ82bw3tc_Krduz9YNS884FK637MqaqpK_EFVRocYGPm&s=10"
+alt="Lauren Phillips"
+class="profile-photo">
 
-        <div class="buttons">
+<div class="profile-name">
+Lauren Phillips
+</div>
 
-            <a href="#" class="btn watch">
-                ▶ Watch Video
-            </a>
+<div class="buttons">
 
-            <a href="https://omg10.com/4/11946026"
-               class="btn support"
-               target="_blank">
-               Download Now
-            </a>
+<a href="#" class="btn watch">
+▶ Watch Video
+</a>
 
-        </div>
+<a
+href="https://omg10.com/4/11946026"
+target="_blank"
+class="btn support">
+Visit / Support
+</a>
 
-    </div>
+</div>
+</div>
 
 
-    <!-- Leana Lovings -->
+<!-- 7 Leana Lovings -->
 
-    <div class="profile">
+<div class="profile">
 
-        <div class="profile-name">
-            Leana Lovings
-        </div>
+<img
+src="https://assets.mycast.io/large/talent/fp3b9bb3n71v7etkezyes0o9/leana-lovings-dzad2v3h.webp"
+alt="Leana Lovings"
+class="profile-photo">
 
-        <div class="buttons">
+<div class="profile-name">
+Leana Lovings
+</div>
 
-            <a href="#" class="btn watch">
-                ▶ Watch Video
-            </a>
+<div class="buttons">
 
-            <a href="https://omg10.com/4/11946026"
-               class="btn support"
-               target="_blank">
-               Download Now
-            </a>
+<a href="#" class="btn watch">
+▶ Watch Video
+</a>
 
-        </div>
+<a
+href="https://omg10.com/4/11946026"
+target="_blank"
+class="btn support">
+Visit / Support
+</a>
 
-    </div>
+</div>
+</div>
 
 
-    <!-- Ava Addams -->
+<!-- 8 Ava Addams -->
 
-    <div class="profile">
+<div class="profile">
 
-        <div class="profile-name">
-            Ava Addams
-        </div>
+<img
+src="https://img62c27b.app-static-file.com/uploadfile/images/2026/10/01/ava+addams+xxx+app+icon.jpg"
+alt="Ava Addams"
+class="profile-photo">
 
-        <div class="buttons">
+<div class="profile-name">
+Ava Addams
+</div>
 
-            <a href="#" class="btn watch">
-                ▶ Watch Video
-            </a>
+<div class="buttons">
 
-            <a href="https://omg10.com/4/11946026"
-               class="btn support"
-               target="_blank">
-               Download Now
-            </a>
+<a href="#" class="btn watch">
+▶ Watch Video
+</a>
 
-        </div>
+<a
+href="https://omg10.com/4/11946026"
+target="_blank"
+class="btn support">
+Visit / Support
+</a>
 
-    </div>
+</div>
+</div>
 
 
-    <!-- Sheena Ryder -->
+<!-- 9 Sheena Ryder -->
 
-    <div class="profile">
+<div class="profile">
 
-        <div class="profile-name">
-            Sheena Ryder
-        </div>
+<img
+src="https://image.tmdb.org/t/p/original/mv7YRFGuBbIWH8kxOWZAfC8Rl7g.jpg"
+alt="Sheena Ryder"
+class="profile-photo">
 
-        <div class="buttons">
+<div class="profile-name">
+Sheena Ryder
+</div>
 
-            <a href="#" class="btn watch">
-                ▶ Watch Video
-            </a>
+<div class="buttons">
 
-            <a href="https://omg10.com/4/11946026"
-               class="btn support"
-               target="_blank">
-               Download Now
-            </a>
+<a href="#" class="btn watch">
+▶ Watch Video
+</a>
 
-        </div>
+<a
+href="https://omg10.com/4/11946026"
+target="_blank"
+class="btn support">
+Visit / Support
+</a>
 
-    </div>
+</div>
+</div>
 
 
-    <!-- Lexi Luna -->
+<!-- 10 Lexi Luna -->
 
-    <div class="profile">
+<div class="profile">
 
-        <div class="profile-name">
-            Lexi Luna
-        </div>
+<img
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRClCMz3fuszExCJ5rA-JWmiWIEm8YJjINCliGomcUZLMt-FrGDO5GsZE5K&s=10"
+alt="Lexi Luna"
+class="profile-photo">
 
-        <div class="buttons">
+<div class="profile-name">
+Lexi Luna
+</div>
 
-            <a href="#" class="btn watch">
-                ▶ Watch Video
-            </a>
+<div class="buttons">
 
-            <a href="https://omg10.com/4/11946026"
-               class="btn support"
-               target="_blank">
-               Download Now
-            </a>
+<a href="#" class="btn watch">
+▶ Watch Video
+</a>
 
-        </div>
+<a
+href="https://omg10.com/4/11946026"
+target="_blank"
+class="btn support">
+Visit / Support
+</a>
 
-    </div>
+</div>
+</div>
 
 
-    <!-- Mariska X -->
+<!-- 11 Mariska X -->
 
-    <div class="profile">
+<div class="profile">
 
-        <div class="profile-name">
-            Mariska X
-        </div>
+<img
+src="https://image.tmdb.org/t/p/original/1UYu6cSEnR1ihFHXZVH2JV9uypN.jpg"
+alt="Mariska X"
+class="profile-photo">
 
-        <div class="buttons">
+<div class="profile-name">
+Mariska X
+</div>
 
-            <a href="#" class="btn watch">
-                ▶ Watch Video
-            </a>
+<div class="buttons">
 
-            <a href="https://omg10.com/4/11946026"
-               class="btn support"
-               target="_blank">
-               Download Now
-            </a>
+<a href="#" class="btn watch">
+▶ Watch Video
+</a>
 
-        </div>
+<a
+href="https://omg10.com/4/11946026"
+target="_blank"
+class="btn support">
+Visit / Support
+</a>
 
-    </div>
+</div>
+</div>
 
 
-    <!-- Reagan Foxx -->
+<!-- 12 Reagan Foxx -->
 
-    <div class="profile">
+<div class="profile">
 
-        <div class="profile-name">
-            Reagan Foxx
-        </div>
+<img
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuhxqa1iS93Y5NcUS2TZ6b008kb1cFDns_jJ_sDA_i55dLIRjvPbscn-8-&s=10"
+alt="Reagan Foxx"
+class="profile-photo">
 
-        <div class="buttons">
+<div class="profile-name">
+Reagan Foxx
+</div>
 
-            <a href="#" class="btn watch">
-                ▶ Watch Video
-            </a>
+<div class="buttons">
 
-            <a href="https://omg10.com/4/11946026"
-               class="btn support"
-               target="_blank">
-               Download Now
-            </a>
+<a href="#" class="btn watch">
+▶ Watch Video
+</a>
 
-        </div>
+<a
+href="https://omg10.com/4/11946026"
+target="_blank"
+class="btn support">
+Visit / Support
+</a>
 
-    </div>
+</div>
+</div>
 
 
-    <a href="index.html" class="back">
-        ← Back to Brazzom
-    </a>
+<!-- BACK -->
 
+<a href="index.html" class="back">
+← Back to Brazzom
+</a>
 
-    <footer>
-        © 2026 Brazzom. All rights reserved.
-    </footer>
+<footer>
+© 2026 Brazzom. All rights reserved.
+</footer>
 
 </div>
 
